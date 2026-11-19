@@ -1,0 +1,62 @@
+{
+  "_": [
+    "散文に書いた数の台帳（決めごと 10）。verification/check.js は、README・pages・docs と、このリポジトリのために作った様式の文から数を拾い、どれかの照らし方に当たらなければ落ちる。",
+    "日付は dates に載せた日だけを通す。条は verification/statutes.json にある条だけを通す。規約の節は statutes.json の sections だけを通す。「」と \"\" の中の数は、引いた句の一部なので数えない（引いた句は check_remote.js と条文の検査が照らす）。 「」と \"\" の中の日付は、引いた句の一部として数えない。",
+    "fixed は、決めた値。それぞれ、値を確かめる所（check）を持つ。"
+  ],
+  "dates": {
+    "2026-11-19": "このリポジトリを置き、条文を取り寄せた日。索引が「無い」「名指さない」と書く事実を確かめた日",
+    "2026-11-12": "10 のリポジトリと Sophaxis と deposit-check の法令の点検の日。Sophaxis の取り寄せの仕事が個人情報保護委員会と Anthropic の頁を読んだ日",
+    "2026-11-15": "OSF の利用規約を置くファイルが書き換わった日（cos.io のコミット cb30f81）。canonical-statutes.json の既知の違い"
+  },
+  "fixed": [
+    {
+      "re": "16 歳",
+      "en": "16 years",
+      "check": "age-min",
+      "why": "申し出を受ける年齢の下限。research-collaboration と同じ線"
+    },
+    {
+      "re": "18 歳",
+      "en": "18 years",
+      "check": "age-adult",
+      "why": "民法第4条の成年。取り寄せた文に「十八歳」がある"
+    },
+    {
+      "re": "7 日",
+      "en": "7 days",
+      "check": "days",
+      "why": "諮問委員への申し出に答えるまでの目安。Sophaxis の募集と同じ"
+    },
+    {
+      "re": "CC BY 4\\.0",
+      "en": "CC BY 4\\.0",
+      "check": "licence",
+      "why": "LICENSE の版"
+    },
+    {
+      "re": "0009-0000-1406-0547",
+      "en": "0009-0000-1406-0547",
+      "check": "orcid",
+      "why": "運営者の ORCID iD"
+    },
+    {
+      "re": "10 のリポジトリ",
+      "en": "10 repositories",
+      "check": "ten",
+      "why": "免責事項の範囲の行の数。scope.json の 十 の数と、check_remote.js が免責事項の行と照らす"
+    },
+    {
+      "re": "3 年間",
+      "en": "three years",
+      "check": "coi",
+      "why": "Sophaxis の募集の利益相反の期間。check_remote.js が並びごと照らす"
+    },
+    {
+      "re": "10 回",
+      "en": "10 times",
+      "check": "rule18",
+      "why": "CLAUDE.md の決めごと 18 の、確かめる回数"
+    }
+  ]
+}
