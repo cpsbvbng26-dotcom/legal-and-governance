@@ -465,8 +465,7 @@ check('頁と様式のつながり：このリポジトリの中のリンク先�
   if (!kinds.length || JSON.stringify(kinds.map((o) => o[0])) !== JSON.stringify(listOf(F.get('pages/requests.md') || '', '## この入口の様式で受ける求め'))) bad.push('求めの種類（日本語）が様式と違う');
   if (JSON.stringify(kinds.map((o) => o[1])) !== JSON.stringify(listOf(F.get('pages/requests.en.md') || '', '## Requests received by the form of this entrance'))) bad.push('求めの種類（英語）が様式と違う');
   const SC = json(F, 'verification/scope.json');
-  const repos = opts(F.get(FORMS[0]) || '', 'repo').map((o) => o[0]);
-  if (!SC || JSON.stringify(repos) !== JSON.stringify(SC['様式で選べる'].concat(['分からない']))) bad.push('求めの様式のリポジトリの選びが scope.json と違う');
+  if (opts(F.get(FORMS[0]) || '', 'repo').length || !kinds.every((o) => o[0].includes('この入口'))) bad.push('求めの様式が、この入口のほかのリポジトリについての求めを受ける形になっている');
   const fields = opts(F.get(FORMS[1]) || '', 'field').map((o) => o[0]);
   const first = listOf(F.get('pages/advisory.md') || '', '## 加われる人')[0] || '';
   if (fields.length !== 5 || fields.some((x) => !first.includes(x))) bad.push('諮問委員への申し出の分野が「加われる人」と違う');
@@ -654,7 +653,7 @@ brk(C(10), '年齢の線を一つの頁で変える', (F) => F.set('pages/law.md
 brk(C(10), 'ORCID iD の数字を一つ変える', sub('verification/numbers.json', '"re": "0009-0000-1406-0547"', '"re": "0009-0000-1406-0548"'));
 brk(C(10), '記録の回数を決めごとと変える', sub('CLAUDE.md', '**合っているかを、最低 10 回確かめる。**', '**合っているかを、最低 3 回確かめる。**'));
 brk(C(10), '十の数を変える', (F) => { const j = JSON.parse(F.get('verification/scope.json')); j['十'].pop(); F.set('verification/scope.json', JSON.stringify(j)); });
-brk(C(11), '連絡先の公開を求めない約束を弱める', sub('pages/requests.md', '運営者は、求めた人に、自分の連絡先を公開することを求めません。', '運営者は、求めた人に、なるべく自分の連絡先を公開することを求めません。'));
+brk(C(11), '連絡先の公開を求めない約束を弱める', sub('pages/requests.md', 'この入口は、求めた人に、自分の連絡先を公開することを求めません。', 'この入口は、求めた人に、なるべく自分の連絡先を公開することを求めません。'));
 brk(C(11), '助言が雇用でない約束を外す', sub('pages/advisory.en.md', '- Advice is not employment. The operator makes no employment contract with an adviser.', '- Advice may be employment.'));
 brk(C(11), '約束を固めていない頁を足す', (F) => { F.set('pages/extra.md', '# 足した頁\n'); F.set('pages/extra.en.md', '# Extra\n'); });
 brk(C(12), '頁へのリンクを壊す', sub('README.md', '(./pages/privacy.md)', '(./pages/private.md)'));
@@ -662,8 +661,8 @@ brk(C(12), 'このリポジトリの様式の名を壊す', sub('pages/advisory.
 brk(C(12), 'このリポジトリの節の名を壊す', sub('pages/privacy.md', '[法令の整理](./law.md)の「GitHub の利用規約」', '[法令の整理](./law.md)の「GitHub の規約」'));
 brk(C(12), '照らせない引用を足す', add('pages/advisory.md', '\n委員は「よく考えます」と言いました。\n'));
 brk(C(12), '英語の頁に照らせない引用を足す', add('pages/requests.en.md', '\nThe operator says "requests are welcome".\n'));
-brk(C(12), '求めの種類を一つ様式から外す', sub(FORMS[0], '        - 言語モデルに渡すことへの同意の撤回 / Withdrawal of consent to giving an issue to a language model\n', ''));
-brk(C(12), '求めの様式のリポジトリを一つ外す', sub(FORMS[0], '        - golden-window-resolution\n', ''));
+brk(C(12), '求めの種類を一つ様式から外す', sub(FORMS[0], '        - この入口の issue を言語モデルに渡すことへの同意の撤回 / Withdrawal of consent to giving an issue of this entrance to a language model\n', ''));
+brk(C(12), '求めの様式に、ほかのリポジトリの選びを足す', sub(FORMS[0], '  - type: dropdown\n    id: kind', '  - type: dropdown\n    id: repo\n    attributes:\n      label: どのリポジトリか / Which repository\n      options:\n        - cpsbvbng26-dotcom\n    validations:\n      required: true\n  - type: dropdown\n    id: kind'));
 brk(C(12), '申し出の分野を変える', sub(FORMS[1], '- 論理学 / Logic', '- 統計学 / Statistics'));
 brk(C(12), '索引の表から一つのリポジトリを外す', (F) => F.set('pages/index.en.md', F.get('pages/index.en.md').split('\n').filter((l) => !l.startsWith('| naval-gazette-notes |')).join('\n')));
 brk(C(12), 'main でない枝を指す', add('pages/index.md', '\n[頁](https://github.com/cpsbvbng26-dotcom/sophaxis/blob/dev/README.md)があります。\n'));

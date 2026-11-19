@@ -6,19 +6,15 @@
     "pages/requests.md": [
       "この頁は、新しい手続きを作りません。",
       "この入口は、新しい連絡先を作りません。",
-      "運営者は、求めた人に、自分の連絡先を公開することを求めません。",
-      "メールで届いた求めには、メールで答えます。",
-      "の「人についての記載」と「情報の扱い」の節と同じ手順で受け、同じように扱います。",
-      "連絡先を公開しないまま非公開の答えを求めるときは、上のメールの宛先でも受けます。",
+      "この節は、この入口のリポジトリ legal-and-governance が自分で決めた手順です。",
+      "この入口は、求めた人に、自分の連絡先を公開することを求めません。",
       "この入口の様式には出さない形にしています。"
     ],
     "pages/requests.en.md": [
       "This page creates no new procedure.",
       "This entrance creates no new contact.",
-      "The operator does not ask a requester to make their own contact details public.",
-      "A request received by email is answered by email.",
-      ", sections \"Statements about people\" and \"Information\", and handles them in the same way.",
-      "A request for a private answer without making a contact public is also received at the email address above."
+      "This section is the procedure that this repository, legal-and-governance, set for itself.",
+      "This entrance does not ask a requester to make their own contact details public."
     ],
     "pages/advisory.md": [
       "- 助言に報酬はありません。助言する人が払うものもありません。",
@@ -43,23 +39,23 @@
       "運営者は、これらのほかには使いません。",
       "このリポジトリのために作った様式では、印は任意です。",
       "issue のコメントとメールの中身は、言語モデルに渡しません。",
-      "運営者は、同意のある issue の題と本文を Claude に渡すほかは、issue に書かれたものをほかの場所に集めず、写しも作りません。",
-      "住所は、求めた人に、メールで遅滞なく答えます。"
+      "運営者は、そのほかの場所に、issue に書かれたものを集めません。",
+      "住所は、届いた個人の情報の本人から求めがあれば、メールで遅滞なく答えます。"
     ],
     "pages/privacy.en.md": [
       "The operator uses personal data for no other purpose.",
       "On the forms made for this repository, the box is optional.",
       "Comments on issues and the content of emails are not given to a language model.",
-      "Besides giving the title and text of an issue with consent to Claude, the operator does not gather what is written in issues anywhere else and makes no copy of it.",
-      "The address is given by email without delay to a person who asks."
+      "The operator does not gather what is written in issues in any other place.",
+      "The address is given by email without delay, on request, to a person whose personal information the operator has received."
     ],
     "pages/law.md": [
       "答えを受けるために、求めた人が自分の連絡先を公開する必要はありません。",
-      "運営者は、誰とも労働契約を結びません。"
+      "運営者は、助言する人と労働契約を結びません。"
     ],
     "pages/law.en.md": [
       "A requester does not need to make their own contact details public to receive the answer.",
-      "The operator makes no employment contract with anyone."
+      "The operator makes no employment contract with an adviser."
     ],
     "pages/disclaimer.md": [
       "どの事柄も、リンク先の規程の文が正です。",

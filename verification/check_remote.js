@@ -27,6 +27,8 @@ function needs(F) {
   for (const f of COPIES) add('cpsbvbng26-dotcom', f);
   ['DISCLAIMER.md', 'DISCLAIMER.en.md', 'verification/statutes.json'].forEach((f) => add('cpsbvbng26-dotcom', f));
   for (const s of S['同じ並び']) add(s.repo, s.path);
+  for (const m of (F.get('pages/index.md') || '').matchAll(/sophaxis\/blob\/main\/([^)\s]+\.ja\.md)/g)) add('sophaxis', m[1]);
+  add('sophaxis', 'docs/legal-audit-2026-11-12.md');
   return want;
 }
 
@@ -171,6 +173,16 @@ check('条文の写し（canonical-statutes.json）が、cpsbvbng26-dotcom の m
   return require('../tools/statutes.js').copyDiff(K, canon).map((d) => d.key + '：' + d.why);
 });
 
+check('索引が訳と書いた Sophaxis の日本語の頁が、どれも頭で英語の頁の訳と書き、訳でないと書いた点検の記録は訳と書かない', (F, X) => {
+  const bad = [];
+  const t = F.get('pages/index.md') || '';
+  const ja = [...new Set([...t.matchAll(/sophaxis\/blob\/main\/([^)\s]+\.ja\.md)/g)].map((m) => m[1]))];
+  if (!t.includes('表の日本語の頁は、点検の記録のほかは、どれも英語の頁の訳です。') || ja.length < 10) bad.push('索引の文か、日本語の頁の並び');
+  for (const f of ja) if (!/訳/.test(String(txt(X, 'sophaxis', f) || '').split('\n').slice(0, 8).join('\n'))) bad.push('sophaxis:' + f + ' が頭で訳と書いていない');
+  if (/訳/.test(String(txt(X, 'sophaxis', 'docs/legal-audit-2026-11-12.md') || '').split('\n').slice(0, 8).join('\n'))) bad.push('点検の記録が訳と書いている');
+  return bad;
+});
+
 /* ------------------------------------------------------------ 壊し方 */
 
 const BREAKS = [];
@@ -198,6 +210,8 @@ brk(C(6), 'golden-window-resolution に突き合わせの受付が置かれる',
 brk(C(6), 'golden-window-resolution に個人情報の頁が置かれる', addX('golden-window-resolution', 'docs/privacy.md'));
 brk(C(7), '正本の条文が一字変わる', subX('cpsbvbng26-dotcom', 'verification/statutes.json', '故意又は過失によって他人の権利', '故意又は重過失によって他人の権利'));
 brk(C(7), '写しから条を一つ外す', (F) => { const j = JSON.parse(F.get('verification/canonical-statutes.json')); delete j['条文']['刑法 第36条']; F.set('verification/canonical-statutes.json', JSON.stringify(j)); });
+brk(C(8), 'Sophaxis の日本語の頁の頭から訳の語が消える', (F, X) => { const t = txt(X, 'sophaxis', 'disclaimer.ja.md'); if (t === null) throw new Error('壊し方が当たらない'); X.sophaxis.text.set('disclaimer.ja.md', t.split('訳').join('写')); });
+brk(C(8), '点検の記録が訳と書く', subX('sophaxis', 'docs/legal-audit-2026-11-12.md', '# 法令の点検（2026-11-12）', '# 法令の点検（2026-11-12、訳）'));
 
 /* ------------------------------------------------------------ 走らせる */
 
