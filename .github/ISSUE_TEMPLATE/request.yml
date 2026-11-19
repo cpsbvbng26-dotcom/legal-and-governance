@@ -1,5 +1,5 @@
 name: 修正と削除の求め / Requests
-description: 運営者のサイトとリポジトリの記載の訂正や削除、権利の侵害の知らせ、同意の撤回などを、公開の場で求める。無償 / Ask in public for the correction or removal of an entry, give notice of an infringement, or withdraw a consent, on the operator's sites and repositories. No fee
+description: この入口（legal-and-governance）の記載の訂正や削除、同意の撤回などを、公開の場で求める。無償 / Ask in public for the correction or removal of an entry of this entrance (legal-and-governance), or withdraw a consent. No fee
 title: "求め: "
 labels: ["求め"]
 body:
@@ -8,61 +8,40 @@ body:
       value: |
         この issue は公開されます。本名・住所・連絡先と、問題の個人情報そのものは書かない形にしています。どこにあるかだけを書く形です。
         個人の情報を含む求めは、この様式ではなく、運営者の ORCID の記録にあるメールアドレスで受けます。https://orcid.org/0009-0000-1406-0547 連絡先を公開しなくても、メールで答えを受け取れます。
+        この様式は、この入口のリポジトリについての求めを受けます。ほかのリポジトリについての求めは、それぞれの手順で出します。手順の場所は修正と削除の求めにあります。https://github.com/cpsbvbng26-dotcom/legal-and-governance/blob/main/pages/requests.md
         Sophaxis の記録についての求めは、Sophaxis の様式で受けます。様式は、削除 https://github.com/cpsbvbng26-dotcom/sophaxis/issues/new?template=removal.yml 、撤回 https://github.com/cpsbvbng26-dotcom/sophaxis/issues/new?template=withdrawal.yml 、訂正 https://github.com/cpsbvbng26-dotcom/sophaxis/issues/new?template=correction.yml 、権利者の知らせ https://github.com/cpsbvbng26-dotcom/sophaxis/issues/new?template=rights-ja.yml です。
         公開物の誤りは、そのリポジトリの誤りの知らせの様式で受けます。様式の場所は法務の索引にあります。https://github.com/cpsbvbng26-dotcom/legal-and-governance/blob/main/pages/index.md
-        書いたものは、この求めに答えることと、そのリポジトリの手続きに沿って扱うことにだけ使います。扱いは個人情報の取り扱いにあります。https://github.com/cpsbvbng26-dotcom/legal-and-governance/blob/main/pages/privacy.md
+        書いたものは、この求めに答えることにだけ使います。扱いは個人情報の取り扱いにあります。https://github.com/cpsbvbng26-dotcom/legal-and-governance/blob/main/pages/privacy.md
         費用はかかりません。手順は修正と削除の求めにあります。https://github.com/cpsbvbng26-dotcom/legal-and-governance/blob/main/pages/requests.md
         This issue is public. The form asks that no real name, address or contact details, and not the personal data itself, be written; only where it is.
         A request that contains personal information is received by email, not through this form, at the address on the operator's ORCID record. https://orcid.org/0009-0000-1406-0547 The answer comes by email, with no need to make a contact public.
+        This form receives requests about this repository. A request about another repository is made under its own procedure; where each procedure is, is in Requests. https://github.com/cpsbvbng26-dotcom/legal-and-governance/blob/main/pages/requests.en.md
         A request about a record on Sophaxis is received through the forms of Sophaxis: removal https://github.com/cpsbvbng26-dotcom/sophaxis/issues/new?template=removal.yml , withdrawal https://github.com/cpsbvbng26-dotcom/sophaxis/issues/new?template=withdrawal.yml , correction https://github.com/cpsbvbng26-dotcom/sophaxis/issues/new?template=correction.yml and rights holder's notice https://github.com/cpsbvbng26-dotcom/sophaxis/issues/new?template=rights.yml .
         An error in a published work is received through the error report form of its repository. The forms are listed in the Legal index. https://github.com/cpsbvbng26-dotcom/legal-and-governance/blob/main/pages/index.en.md
-        What is written is used only to answer this request and to handle it under the procedure of the repository concerned. The handling is in Personal data. https://github.com/cpsbvbng26-dotcom/legal-and-governance/blob/main/pages/privacy.en.md
+        What is written is used only to answer this request. The handling is in Personal data. https://github.com/cpsbvbng26-dotcom/legal-and-governance/blob/main/pages/privacy.en.md
         There is no fee. The procedure is in Requests. https://github.com/cpsbvbng26-dotcom/legal-and-governance/blob/main/pages/requests.en.md
-  - type: dropdown
-    id: repo
-    attributes:
-      label: どのリポジトリか / Which repository
-      options:
-        - cpsbvbng26-dotcom
-        - errata-check
-        - self-correction
-        - trinity-infinity
-        - trinity-operator
-        - autonomy-and-self-cultivation
-        - naval-gazette-notes
-        - researcher-profile
-        - justice-and-algorithms
-        - solitary-school
-        - deposit-check
-        - research-collaboration
-        - golden-window-resolution
-        - legal-and-governance
-        - 分からない / Not sure
-    validations:
-      required: true
   - type: dropdown
     id: kind
     attributes:
       label: 求めの種類 / Kind of request
       options:
-        - 人についての記載の訂正・削除（個人の情報を含まないもの） / Correction or removal of a statement about a person (without personal information)
-        - 人についての記載でない権利の侵害の知らせ / Notice of an infringement that does not concern a statement about a person
-        - 言語モデルに渡すことへの同意の撤回 / Withdrawal of consent to giving an issue to a language model
-        - そのほかの訂正・削除の求め / Another request for correction or removal
+        - この入口の記載の訂正・削除（個人の情報を含まないもの） / Correction or removal of an entry of this entrance (without personal information)
+        - この入口の issue を言語モデルに渡すことへの同意の撤回 / Withdrawal of consent to giving an issue of this entrance to a language model
+        - この入口についてのそのほかの求め / Another request about this entrance
     validations:
       required: true
   - type: input
     id: where
     attributes:
       label: どこにあるか / Where
-      description: ファイルの名と行、頁の URL、issue の番号。個人情報そのものは書かない形にしています / A file name and line, the URL of a page, or an issue number. The personal data itself is not written
+      description: このリポジトリのファイルの名と行、または issue の番号。個人情報そのものは書かない形にしています / A file name and line, or an issue number, of this repository. The personal data itself is not written
     validations:
       required: true
   - type: textarea
     id: what
     attributes:
       label: 何を求めるか / What is asked
-      description: 短くてかまいません。権利の侵害の知らせなら、どの権利かを書く形です。素材そのものは書き写さない形にしています / Short is fine. For a notice of an infringement, the right concerned. The material itself is not copied
+      description: 短くてかまいません / Short is fine
     validations:
       required: true
   - type: checkboxes
