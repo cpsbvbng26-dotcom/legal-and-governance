@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 入口の頁 / Pages of this entrance
+    url: https://github.com/cpsbvbng26-dotcom/legal-and-governance/blob/main/README.md
+    about: 法務の索引・修正と削除の求め・諮問委員の募集 / The legal index, requests and the advisory board
+  - name: 個人の情報を含む求め / Requests that contain personal information
+    url: https://github.com/cpsbvbng26-dotcom/legal-and-governance/blob/main/pages/requests.md
+    about: 公開の issue ではなく、運営者の ORCID の記録にあるメールアドレスで受けます / Received by email at the address on the operator's ORCID record, not in a public issue
+  - name: 安全の問題の知らせ方 / Reporting a security issue
+    url: https://github.com/cpsbvbng26-dotcom/legal-and-governance/blob/main/SECURITY.md
+    about: 安全の問題は、公開の issue ではなく、この手順で受けます / Security issues are received by this route, not in a public issue
