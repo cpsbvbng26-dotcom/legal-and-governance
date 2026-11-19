@@ -1,0 +1,89 @@
+{
+  "_": [
+    "法務の索引（pages/index.md）に入れるリポジトリの並び。研究の側だけで、運営者のほかの創作の場は入れない。",
+    "十 は、cpsbvbng26-dotcom の DISCLAIMER.md の範囲の行に挙がる 10 のリポジトリ。check_remote.js が、その行の並びと照らす。",
+    "様式で選べる は、求めの様式（request.yml）の「どのリポジトリか」の選び。Sophaxis は Sophaxis の様式へ案内するので入れない。",
+    "免責事項が名指さない は、頁が「免責事項の範囲の行に名がない」と書くリポジトリ。check_remote.js が、DISCLAIMER.md と DISCLAIMER.en.md にその名が無いことを確かめる。",
+    "無いこと は、頁が「無い」と書くもの。check_remote.js が、そのリポジトリの main に無いことを確かめる。あれば落ちるので、頁を直す。",
+    "同じ並び は、Sophaxis の募集と一字一句同じにする箇条の並び。check_remote.js が照らす。"
+  ],
+  "十": [
+    "cpsbvbng26-dotcom",
+    "errata-check",
+    "self-correction",
+    "trinity-infinity",
+    "trinity-operator",
+    "autonomy-and-self-cultivation",
+    "naval-gazette-notes",
+    "researcher-profile",
+    "justice-and-algorithms",
+    "solitary-school"
+  ],
+  "ほか": [
+    "sophaxis",
+    "deposit-check",
+    "research-collaboration",
+    "golden-window-resolution",
+    "legal-and-governance"
+  ],
+  "様式で選べる": [
+    "cpsbvbng26-dotcom",
+    "errata-check",
+    "self-correction",
+    "trinity-infinity",
+    "trinity-operator",
+    "autonomy-and-self-cultivation",
+    "naval-gazette-notes",
+    "researcher-profile",
+    "justice-and-algorithms",
+    "solitary-school",
+    "deposit-check",
+    "research-collaboration",
+    "golden-window-resolution",
+    "legal-and-governance"
+  ],
+  "免責事項が名指さない": [
+    "golden-window-resolution",
+    "legal-and-governance"
+  ],
+  "無いこと": {
+    "golden-window-resolution": {
+      "files": [
+        ".github/workflows/checked-intake.yml",
+        ".github/checked-intake/verify.js",
+        ".github/checked-intake/config.json"
+      ],
+      "pattern": "(^|/)[^/]*(disclaimer|privacy)[^/]*\\.md$"
+    }
+  },
+  "同じ並び": [
+    {
+      "mine": "pages/advisory.md",
+      "heading": "## 加われる人",
+      "repo": "sophaxis",
+      "path": "advisory.ja.md",
+      "theirs": "## 加われる人"
+    },
+    {
+      "mine": "pages/advisory.md",
+      "heading": "## 利益相反",
+      "repo": "sophaxis",
+      "path": "advisory.ja.md",
+      "theirs": "## 利益相反"
+    },
+    {
+      "mine": "pages/advisory.en.md",
+      "heading": "## Who can join",
+      "repo": "sophaxis",
+      "path": "advisory.md",
+      "theirs": "## Who can join"
+    },
+    {
+      "mine": "pages/advisory.en.md",
+      "heading": "## Conflicts of interest",
+      "repo": "sophaxis",
+      "path": "advisory.md",
+      "theirs": "## Conflicts of interest"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "_": [
+    "規程の約束の文。verification/check.js が、一字一句そのままあることを確かめる。弱めない。"
+  ],
+  "files": {
+    "pages/requests.md": [
+      "この頁は、新しい手続きを作りません。",
+      "この入口は、新しい連絡先を作りません。",
+      "運営者は、求めた人に、自分の連絡先を公開することを求めません。",
+      "メールで届いた求めには、メールで答えます。",
+      "の「人についての記載」と「情報の扱い」の節と同じ手順で受け、同じように扱います。",
+      "連絡先を公開しないまま非公開の答えを求めるときは、上のメールの宛先でも受けます。",
+      "この入口の様式には出さない形にしています。"
+    ],
+    "pages/requests.en.md": [
+      "This page creates no new procedure.",
+      "This entrance creates no new contact.",
+      "The operator does not ask a requester to make their own contact details public.",
+      "A request received by email is answered by email.",
+      ", sections \"Statements about people\" and \"Information\", and handles them in the same way.",
+      "A request for a private answer without making a contact public is also received at the email address above."
+    ],
+    "pages/advisory.md": [
+      "- 助言に報酬はありません。助言する人が払うものもありません。",
+      "- 助言は任意です。助言する人は、いつでも、そう言えばやめられます。",
+      "- 助言は雇用ではありません。運営者は、助言する人と労働契約を結びません。",
+      "- 助言は何も決めません。決めるのは運営者で、結果の責任も運営者が負います。",
+      "16 歳未満の人の申し出は受けません。",
+      "18 歳未満の人の申し出は、親または保護者の同意があるときに限って受けます。",
+      "委員の名は、本人が同意したあとにだけ、",
+      "いま、委員はいません。"
+    ],
+    "pages/advisory.en.md": [
+      "- Advice is unpaid. An adviser pays nothing either.",
+      "- Advice is voluntary. An adviser can stop at any time by saying so.",
+      "- Advice is not employment. The operator makes no employment contract with an adviser.",
+      "- Advice decides nothing. The operator decides, and stays responsible for the outcome.",
+      "An offer from a person under 16 years of age is not accepted.",
+      "An offer from a person under 18 years of age is accepted only with the consent of a parent or guardian.",
+      "There are no advisers at present."
+    ],
+    "pages/privacy.md": [
+      "運営者は、これらのほかには使いません。",
+      "このリポジトリのために作った様式では、印は任意です。",
+      "issue のコメントとメールの中身は、言語モデルに渡しません。",
+      "運営者は、同意のある issue の題と本文を Claude に渡すほかは、issue に書かれたものをほかの場所に集めず、写しも作りません。",
+      "住所は、求めた人に、メールで遅滞なく答えます。"
+    ],
+    "pages/privacy.en.md": [
+      "The operator uses personal data for no other purpose.",
+      "On the forms made for this repository, the box is optional.",
+      "Comments on issues and the content of emails are not given to a language model.",
+      "Besides giving the title and text of an issue with consent to Claude, the operator does not gather what is written in issues anywhere else and makes no copy of it.",
+      "The address is given by email without delay to a person who asks."
+    ],
+    "pages/law.md": [
+      "答えを受けるために、求めた人が自分の連絡先を公開する必要はありません。",
+      "運営者は、誰とも労働契約を結びません。"
+    ],
+    "pages/law.en.md": [
+      "A requester does not need to make their own contact details public to receive the answer.",
+      "The operator makes no employment contract with anyone."
+    ],
+    "pages/disclaimer.md": [
+      "どの事柄も、リンク先の規程の文が正です。",
+      "この入口は、ほかのリポジトリの規程を変えません。",
+      "Claude は著者ではありません。"
+    ],
+    "pages/disclaimer.en.md": [
+      "On every matter, the text of the policy linked to governs.",
+      "This entrance does not change the policies of the other repositories.",
+      "Claude is not an author."
+    ],
+    "README.md": [
+      "この入口は、新しい手続きを作りません。",
+      "Claude は著者ではありません。"
+    ],
+    "README.en.md": [
+      "This entrance creates no new procedure.",
+      "Claude is not an author."
+    ],
+    "pages/index.md": [
+      "索引は案内であり、規程そのものではありません。",
+      "どの事柄も、リンク先の文が正です。"
+    ],
+    "pages/index.en.md": [
+      "The index is a guide, not a policy.",
+      "On every matter, the text linked to governs."
+    ]
+  }
+}
