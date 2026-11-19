@@ -1,0 +1,37 @@
+name: 索引の照合
+
+# 索引と求めの頁と諮問委員の募集が指すファイル・節の名・引いた句と、正本の写しと、Sophaxis の募集と同じ並びを、
+# 各リポジトリの main と照らす（verification/check_remote.js）。読むのは公開のリポジトリだけで、何も書かない。
+# PR と push のたびと、週に一度（金曜）回す。ほかのリポジトリの main が変わって食い違えば、この仕事が落ちる。
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: '41 3 * * 5'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  remote:
+    name: リンク先・節の名・引いた句・正本・同じ並び
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    concurrency:
+      group: remote-${{ github.ref }}
+      cancel-in-progress: true
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+      - run: node verification/check_remote.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: node verification/check_remote.js --break
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
