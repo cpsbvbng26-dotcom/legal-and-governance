@@ -1,0 +1,47 @@
+{
+  "title": "legal-and-governance: the legal index, requests and advisory board of the operator's research sites / 研究の側のサイトの法務の索引・修正と削除の求め・諮問委員の募集",
+  "description": "<p>One entrance that gathers, for the operator's research sites and repositories, three things: an index of each site's legal framework (disclaimers, policies, audit records and copies of statutes), the routes and forms for requests to correct or remove something (errors, personal data, rights, takedown), and the call for advisers.</p><p>It creates no new legal procedure: each request is routed to a procedure that already exists, and every passage it quotes from another repository is checked, phrase by phrase, against that repository's main branch. Statutes are quoted only from texts fetched from Japan's e-Gov law API. A weekly watch fetches those statutes, the statutes recorded by cpsbvbng26-dotcom, and the terms held on GitHub again, and opens an issue in this repository when one differs from the record. The pages are not legal advice.</p><p>研究の側のサイトとリポジトリの、法務の入口です。各サイトの法的な枠組みの索引、修正や削除の求めの窓口と様式、諮問委員の募集を集めています。新しい手続きは作らず、すでにある手続きへ案内します。法的な助言ではありません。</p>",
+  "upload_type": "publication",
+  "publication_type": "other",
+  "language": "jpn",
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "creators": [
+    {
+      "name": "Nemoto, Takuya",
+      "orcid": "0009-0000-1406-0547"
+    }
+  ],
+  "keywords": [
+    "legal index",
+    "disclaimer",
+    "personal information",
+    "Act on the Protection of Personal Information",
+    "takedown",
+    "corrections",
+    "advisory board",
+    "conflict of interest",
+    "e-Gov law API",
+    "research governance",
+    "法務",
+    "個人情報保護法"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/cpsbvbng26-dotcom/cpsbvbng26-dotcom",
+      "relation": "references",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://github.com/cpsbvbng26-dotcom/sophaxis",
+      "relation": "references",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://github.com/cpsbvbng26-dotcom/research-collaboration",
+      "relation": "references",
+      "scheme": "url"
+    }
+  ],
+  "notes": "The pages, the forms, the checks and the tools were written with Claude Code (Anthropic) at the author's request. The author reviewed them and is responsible for them. Claude is not an author. Not legal advice. The pages and the forms are CC BY 4.0 (LICENSE); the check scripts, the tools and the workflows are MIT (LICENSE-CODE). The licence field of this record covers the pages and the forms only. Texts by others that this repository quotes, or keeps to verify its quotations, are not licensed under CC BY 4.0 or the MIT License and remain their owners'."
+}

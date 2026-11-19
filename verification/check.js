@@ -586,6 +586,28 @@ check('CLAUDE.md が、決めごと 16・17・18 に当たる文を持つ', (F) 
   return want.filter((s) => !t.includes(s)).map((s) => s.slice(0, 24));
 });
 
+check('.zenodo.json：著者は一人で ORCID iD つき・所属なし、ライセンスは LICENSE と同じ、言語モデルの開示があり、license の欄が掛かる部分を書き、DOI を書かない', (F) => {
+  const z = json(F, '.zenodo.json');
+  if (!z) return ['.zenodo.json が読めない'];
+  const bad = [];
+  const c = z.creators || [];
+  if (c.length !== 1 || c[0].name !== 'Nemoto, Takuya' || c[0].orcid !== '0009-0000-1406-0547' || Object.keys(c[0]).length !== 2) bad.push('著者（一人、ORCID iD、所属なし）');
+  const lic = (F.get('LICENSE') || '').startsWith('Creative Commons Attribution 4.0') ? 'cc-by-4.0' : (F.get('LICENSE') || '').startsWith('MIT') ? 'mit' : '?';
+  if (z.license !== lic) bad.push('license が LICENSE と違う');
+  const n = z.notes || '';
+  if (!n.includes('Claude is not an author.') || !n.includes('Claude Code (Anthropic)')) bad.push('notes に言語モデルの開示が無い');
+  if (!/is CC BY 4\.0|are CC BY 4\.0/.test(n) || !/are MIT|is MIT/.test(n) || !/The licence field of this record covers the pages and the forms only\./.test(n) || !/The pages and the forms are CC BY 4\.0/.test(n)) bad.push('notes が license の欄の掛かる部分を書かない');
+  if (!['publication', 'software', 'other', 'dataset'].includes(z.upload_type) || !Array.isArray(z.keywords) || !z.keywords.length) bad.push('upload_type か keywords');
+  for (const r of z.related_identifiers || []) {
+    if (r.scheme === 'doi' || /10\.\d{4,}\//.test(r.identifier)) bad.push('DOI を書いている（決めごと 1：受け取った番号だけを書く）');
+    const g = /^https:\/\/github\.com\/cpsbvbng26-dotcom\/([^/]+)$/.exec(r.identifier || '');
+    const S = json(F, 'verification/scope.json');
+    if (!g || !S || !S['十'].concat(S['ほか']).includes(g[1])) bad.push('related_identifiers が索引のリポジトリでない：' + r.identifier);
+  }
+  if (/affiliation/i.test(F.get('.zenodo.json'))) bad.push('所属がある');
+  return bad;
+});
+
 /* ------------------------------------------------------------ 壊し方 */
 
 const BREAKS = [];
@@ -660,6 +682,12 @@ brk(C(15), '見張りの曜日を木曜にする', (F) => F.set('.github/workflo
 brk(C(15), '見張りの PR の仕事に issues: write を足す', sub('.github/workflows/statutes.yml', '    permissions:\n      contents: read\n    steps:', '    permissions:\n      contents: read\n      issues: write\n    steps:'));
 brk(C(15), 'package.json を置く', (F) => F.set('package.json', '{}'));
 brk(C(16), 'CLAUDE.md の決めごと 18 を 3 回に戻す', sub('CLAUDE.md', '**合っているかを、最低 10 回確かめる。**', '**合っているかを、最低 3 回確かめる。**'));
+const zsub = (fn) => (F) => { const z = JSON.parse(F.get('.zenodo.json')); fn(z); F.set('.zenodo.json', JSON.stringify(z)); };
+brk(C(17), '.zenodo.json に所属を足す', zsub((z) => { z.creators[0].affiliation = 'X'; }));
+brk(C(17), '.zenodo.json の license を mit にする', zsub((z) => { z.license = 'mit'; }));
+brk(C(17), '.zenodo.json の開示を消す', zsub((z) => { z.notes = z.notes.replace('Claude is not an author. ', ''); }));
+brk(C(17), '.zenodo.json に受け取っていない DOI を書く', zsub((z) => { z.related_identifiers.push({ identifier: '10.5281/zenodo.1', relation: 'isPartOf', scheme: 'doi' }); }));
+brk(C(17), '.zenodo.json の欄の文を変える', zsub((z) => { z.notes = z.notes.replace('covers the pages and the forms only', 'names both'); }));
 
 /* ------------------------------------------------------------ 走らせる */
 
