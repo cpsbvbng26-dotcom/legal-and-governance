@@ -9,7 +9,7 @@ The other repositories are covered by their own pages, listed in the [Legal inde
 
 This repository is run by an individual, Takuya Nemoto (根本卓哉), the holder of the GitHub account cpsbvbng26-dotcom.
 The operator's address is not published.
-The address is given by email without delay to a person who asks.
+The address is given by email without delay, on request, to a person whose personal information the operator has received.
 How to ask is in [Requests](./requests.en.md), section "Requests that cannot be made in public".
 How the operator reads the law is in [Reading of the law](./law.en.md), section "Act on the Protection of Personal Information".
 
@@ -82,7 +82,9 @@ This page has not checked those settings.
 The operator gives personal data to no other third party.
 A case based on law is an exception.
 To check an offer to advise, the operator reads the public ORCID record of the person who made it.
-Otherwise, the operator receives no personal data from third parties.
+A request or notice may mention another person.
+The operator uses that only to answer the request or notice.
+Apart from reading ORCID records, the operator does not seek personal data from third parties.
 
 ## How long data is kept
 
@@ -96,7 +98,8 @@ Deleting an issue does not necessarily remove copies in notifications already se
 
 ## Security measures
 
-Besides giving the title and text of an issue with consent to Claude, the operator does not gather what is written in issues anywhere else and makes no copy of it.
+Copies of what is written in issues may remain in the notification emails GitHub sends, and in the records of the work in which the title and text of an issue with consent were handled with Claude.
+The operator does not gather what is written in issues in any other place.
 Only the operator's GitHub account can change this repository.
 Every change stays in the public history.
 

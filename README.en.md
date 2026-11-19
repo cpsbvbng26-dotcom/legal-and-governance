@@ -32,7 +32,8 @@ On every matter, the text of the policy linked to governs.
 - Security issues are received through the route in [SECURITY.md](./SECURITY.md).
 
 Issues are public.
-A request that contains personal information is received by email, at the address on the operator's [ORCID record](https://orcid.org/0009-0000-1406-0547), not in a public issue.
+A request about this entrance that contains personal information is received by email, at the address on the operator's [ORCID record](https://orcid.org/0009-0000-1406-0547), not in a public issue.
+Where requests about the other repositories go is in [Requests](./pages/requests.en.md).
 
 ## The operator
 

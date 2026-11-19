@@ -48,7 +48,7 @@
 
 [研究者の方へ](https://github.com/cpsbvbng26-dotcom/sophaxis/blob/main/call.ja.md)は、「Sophaxis は、哲学・数学・論理学・数理哲学・科学哲学の研究者のためのものです。」と書いています。
 [利用規約](https://github.com/cpsbvbng26-dotcom/sophaxis/blob/main/policies/terms.ja.md)は、「訳と英語の文が食い違うときは、英語の文が適用されます。」と書いています。
-表のうち、規程と連絡先と名前の日本語の頁は、英語の頁の訳です。
+表の日本語の頁は、点検の記録のほかは、どれも英語の頁の訳です。
 
 | 頁 | 中身 |
 | --- | --- |
@@ -104,7 +104,7 @@
 [golden-window-resolution の README](https://github.com/cpsbvbng26-dotcom/golden-window-resolution/blob/main/README.md) は、稿の「原稿・PDF・検査の台本を置いています。」と書いています。
 このリポジトリには、免責事項と個人情報の扱いの頁がありません。
 [免責事項](https://github.com/cpsbvbng26-dotcom/cpsbvbng26-dotcom/blob/main/DISCLAIMER.md)の範囲の行は、2026-11-19 の main で、このリポジトリを名指していません。
-このリポジトリについての求めの受け方は、[修正と削除の求め](./requests.md)にあります。
+このリポジトリについての求めの手順がどの頁にも無いことは、[修正と削除の求め](./requests.md)に書いています。
 このリポジトリの[誤りの知らせの様式](https://github.com/cpsbvbng26-dotcom/golden-window-resolution/blob/main/.github/ISSUE_TEMPLATE/error-report.yml)は、「2026-12-01 から、この様式は「突き合わせの受付」で確かめます。」と書いています。
 2026-11-19 の main には、突き合わせの受付の仕事が置かれていません。
 

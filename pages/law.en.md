@@ -62,7 +62,7 @@ This page draws no conclusion on whether the content of an issue is 「個人デ
 Article 32(1) provides that, for retained personal data, certain matters 「本人の知り得る状態（本人の求めに応じて遅滞なく回答する場合を含む。）に置かなければならない。」
 The first of them is 「当該個人情報取扱事業者の氏名又は名称及び住所」.
 The operator's name is in [Personal data](./privacy.en.md).
-The address is given by email without delay, on request.
+The address is given by email without delay, on request, to a person whose personal information the operator has received.
 A requester does not need to make their own contact details public to receive the answer.
 Article 33(1) provides that the person 「電磁的記録の提供による方法その他の個人情報保護委員会規則で定める方法による開示を請求することができる。」
 Article 34(1) provides that, when the content of retained personal data is untrue, the person 「当該保有個人データの内容の訂正、追加又は削除（以下この条において「訂正等」という。）を請求することができる。」
@@ -86,7 +86,7 @@ Article 11 of the Labour Standards Act defines wages as 「労働の対償とし
 Article 6 of the Labour Contracts Act provides: 「労働契約は、労働者が使用者に使用されて労働し、使用者がこれに対して賃金を支払うことについて、労働者及び使用者が合意することによって成立する。」
 The operator pays advisers no wages and no consideration of any kind.
 The operator does not set the hours or the place of advice.
-The operator makes no employment contract with anyone.
+The operator makes no employment contract with an adviser.
 This page draws no conclusion on how these facts place any relationship of advice under the law.
 
 ## GitHub Terms of Service

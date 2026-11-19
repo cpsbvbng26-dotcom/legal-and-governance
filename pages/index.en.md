@@ -48,7 +48,7 @@ The sections of the Disclaimer are these.
 
 [A call to researchers](https://github.com/cpsbvbng26-dotcom/sophaxis/blob/main/call.md) says: "Sophaxis is for researchers in philosophy, mathematics, logic, the philosophy of mathematics and the philosophy of science."
 The [Terms of Use](https://github.com/cpsbvbng26-dotcom/sophaxis/blob/main/policies/terms.md) say of the Japanese page: "It is a translation; where the two differ, the English text applies."
-Of the pages below, the policies, the contact page and the page on the name are in English, and each has a Japanese translation.
+Every Japanese page of Sophaxis linked from the Japanese version of this table, except the audit record, is a translation of the English page.
 
 | Page | Content |
 | --- | --- |
@@ -104,7 +104,7 @@ The [README of research-collaboration](https://github.com/cpsbvbng26-dotcom/rese
 The [README of golden-window-resolution](https://github.com/cpsbvbng26-dotcom/golden-window-resolution/blob/main/README.en.md) describes it as the "Source, PDF and verification scripts of the paper".
 This repository has no disclaimer page and no page on personal data.
 The scope line of the [Disclaimer](https://github.com/cpsbvbng26-dotcom/cpsbvbng26-dotcom/blob/main/DISCLAIMER.en.md) does not name this repository on main as of 2026-11-19.
-How requests about this repository are received is in [Requests](./requests.en.md).
+That no page gives a procedure for requests about this repository is stated in [Requests](./requests.en.md).
 The [error report form](https://github.com/cpsbvbng26-dotcom/golden-window-resolution/blob/main/.github/ISSUE_TEMPLATE/error-report.yml) of this repository says: "From 2026-12-01, this form is checked by the checked intake."
 On main as of 2026-11-19, the repository has no workflow for the checked intake.
 
