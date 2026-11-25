@@ -1,6 +1,6 @@
 # 法令の点検の記録
 
-最終更新：2026-11-19。
+最終更新：2026-11-25。
 
 このリポジトリを置く前に、頁を読む人が誤りを探す側に立って、頁と様式を読み直しました。
 条文を取り寄せ直して照らし、ほかのリポジトリの規程と食い違うところ、言い過ぎ、足りないところを探しました。
@@ -81,6 +81,19 @@ cpsbvbng26-dotcom の `verification/statutes.json` が 2026-11-12 に記した�
 - 正本の写しの誤りの知らせの様式は、PyYAML と Ruby の YAML の読み手で読めませんでした。説明の欄の文の中にある、コロンと空白の並びが原因です。GitHub がその様式をどう読むかは、確かめていません。
 - golden-window-resolution の誤りの知らせの様式は、突き合わせの受付を書いていますが、そのリポジトリに受付の仕事はありません（同じ点検が見つけたこと）。
 - 免責事項の範囲の行は、golden-window-resolution とこのリポジトリを名指していません（同じ点検が見つけたこと）。この入口のリポジトリについての求めは、この入口が自分で決めた手順によります。
+
+## 2026-11-25 に確かめ直したこと
+
+上の「このリポジトリでは直さない食い違い」のうち、次のことは、2026-11-25 の各リポジトリの main では成り立ちません。
+索引と求めの頁は、2026-11-25 に、今の main の文に合わせました。
+
+- research-collaboration の[求めの頁](https://github.com/cpsbvbng26-dotcom/research-collaboration/blob/main/policies/requests.md)は、コミット `8619f48` から、免責事項のメールの宛先でも求めを受け、そのメールに非公開で答えると書いています。
+- [golden-window-resolution の README](https://github.com/cpsbvbng26-dotcom/golden-window-resolution/blob/main/README.md)は、コミット `7780a13` から、届いた個人の情報の扱いと求め方を、免責事項の「情報の扱い」の節に案内しています。
+- golden-window-resolution には、コミット `9398aa6` から、突き合わせの受付の[仕事](https://github.com/cpsbvbng26-dotcom/golden-window-resolution/blob/main/.github/workflows/checked-intake.yml)が置かれています。
+- [免責事項](https://github.com/cpsbvbng26-dotcom/cpsbvbng26-dotcom/blob/main/DISCLAIMER.md)は、範囲の行の次の行で、コミット `03e0b3e` から golden-window-resolution を、コミット `fcfdd9d` から legal-and-governance を挙げています。
+
+どれも、このリポジトリを置いたマージ（`00e2dc5`）より前に、それぞれの main に入っていました。
+この記録は、それらがまだ枝にあるうちに書いたもので、マージの前に各リポジトリの main を読み直していませんでした。
 
 ## ワークフローと GitHub の追加製品の規約
 
