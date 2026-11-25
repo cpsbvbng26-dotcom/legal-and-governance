@@ -1,6 +1,6 @@
 # 法務の索引
 
-最終更新：2026-11-19。
+最終更新：2026-11-25。
 
 この頁は、運営者のサイトとリポジトリの法的な枠組みを、この頁から辿るための索引です。
 索引は案内であり、規程そのものではありません。
@@ -103,10 +103,11 @@
 
 [golden-window-resolution の README](https://github.com/cpsbvbng26-dotcom/golden-window-resolution/blob/main/README.md) は、稿の「原稿・PDF・検査の台本を置いています。」と書いています。
 このリポジトリには、免責事項と個人情報の扱いの頁がありません。
-[免責事項](https://github.com/cpsbvbng26-dotcom/cpsbvbng26-dotcom/blob/main/DISCLAIMER.md)の範囲の行は、2026-11-19 の main で、このリポジトリを名指していません。
-このリポジトリについての求めの手順がどの頁にも無いことは、[修正と削除の求め](./requests.md)に書いています。
+[免責事項](https://github.com/cpsbvbng26-dotcom/cpsbvbng26-dotcom/blob/main/DISCLAIMER.md)の範囲の行は、このリポジトリを名指していません。
+[免責事項](https://github.com/cpsbvbng26-dotcom/cpsbvbng26-dotcom/blob/main/DISCLAIMER.md)は、範囲の行の次の行でこのリポジトリを挙げ、「情報の扱い」「issue の中身と言語モデル」「突き合わせの受付」「本文の空の issue」の節が「それぞれの節に書いた範囲で掛かります。」と書いています。
+このリポジトリについての求めをどこへ出すかは、[修正と削除の求め](./requests.md)に書いています。
 このリポジトリの[誤りの知らせの様式](https://github.com/cpsbvbng26-dotcom/golden-window-resolution/blob/main/.github/ISSUE_TEMPLATE/error-report.yml)は、「2026-12-01 から、この様式は「突き合わせの受付」で確かめます。」と書いています。
-2026-11-19 の main には、突き合わせの受付の仕事が置かれていません。
+このリポジトリには、突き合わせの受付の[仕事](https://github.com/cpsbvbng26-dotcom/golden-window-resolution/blob/main/.github/workflows/checked-intake.yml)と[台本](https://github.com/cpsbvbng26-dotcom/golden-window-resolution/blob/main/.github/checked-intake/verify.js)と[設定](https://github.com/cpsbvbng26-dotcom/golden-window-resolution/blob/main/.github/checked-intake/config.json)が置かれています。
 
 | 頁 | 中身 |
 | --- | --- |
