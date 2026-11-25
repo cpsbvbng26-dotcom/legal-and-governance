@@ -141,15 +141,23 @@ check('諮問委員の「加われる人」と「利益相反」の並びが、S
   return bad;
 });
 
-check('免責事項の範囲の行が scope.json の 10 のリポジトリと同じ並びで、名指さないと書いたリポジトリを名指さない', (F, X) => {
+check('免責事項の範囲の行が scope.json の 10 のリポジトリと同じ並びで、その次の行が、頁が挙がると書いたリポジトリと節を挙げ、挙がらないと書いた節を挙げない', (F, X) => {
   const S = json(F, 'verification/scope.json');
   const bad = [];
   const D = txt(X, 'cpsbvbng26-dotcom', 'DISCLAIMER.md') || '', E = txt(X, 'cpsbvbng26-dotcom', 'DISCLAIMER.en.md') || '';
-  const lines = D.split('\n');
+  const lines = D.split('\n'), en = E.split('\n');
   const i = lines.findIndex((l) => l.includes('次の ' + S['十'].length + ' のリポジトリと、そこから作るサイトに掛かります。'));
+  const j = en.findIndex((l) => l.includes('the following ' + S['十'].length + ' repositories'));
   const names = i < 0 ? [] : lines[i + 1].replace(/\s*です。$/, '').split('、');
   if (JSON.stringify(names) !== JSON.stringify(S['十'])) bad.push('DISCLAIMER.md の範囲の行が scope.json の 十 と違う（' + names.join(',') + '）');
-  for (const r of S['免責事項が名指さない']) if (D.includes(r) || E.includes(r)) bad.push('免責事項が ' + r + ' を名指している。頁の「名がありません」を直す');
+  const N = S['免責事項の次の行'];
+  const next = i < 0 ? '' : lines[i + 2] || '', nextEn = j < 0 ? '' : en[j + 2] || '';
+  for (const [line, file, repos, secs, nots, q] of [[next, 'DISCLAIMER.md', N['挙がるリポジトリ'], N['挙がる節'], N['挙がらない節'], (s) => '「' + s + '」'], [nextEn, 'DISCLAIMER.en.md', N['挙がるリポジトリ'], N['挙がる節（英語）'], N['挙がらない節（英語）'], (s) => '"' + s + '"']]) {
+    if (!/(?:それぞれの節に書いた範囲で掛かります。|each to the extent that it states\.)$/.test(line)) { bad.push(file + '：範囲の行の次の行が、節の掛かり方を書く行でない'); continue; }
+    for (const r of repos) if (!line.split(/、| には|, | and /).map((x) => x.replace(/^To /, '')).includes(r)) bad.push(file + '：範囲の行の次の行が ' + r + ' を挙げていない。頁の「挙げ」を直す');
+    for (const s of secs) if (!line.includes(q(s))) bad.push(file + '：範囲の行の次の行が節 ' + s + ' を挙げていない');
+    for (const s of nots) if (line.includes(q(s))) bad.push(file + '：範囲の行の次の行が節 ' + s + ' を挙げている。頁の「入っていません」を直す');
+  }
   return bad;
 });
 
@@ -194,6 +202,7 @@ const addX = (repo, p) => (F, X) => { X[repo].files.add(p); };
 const C = (i) => CHECKS[i].name;
 brk(C(0), '索引の表のリンク先を、無いファイルにする', subF('pages/index.md', 'self-correction/blob/main/SECURITY.md', 'self-correction/blob/main/SECURITY.txt'));
 brk(C(0), 'main から、求めの頁が指す様式を消す', dropX('sophaxis', '.github/ISSUE_TEMPLATE/withdrawal.yml'));
+brk(C(0), 'main から、索引と求めの頁が指す golden-window-resolution の受付の仕事を消す', dropX('golden-window-resolution', '.github/workflows/checked-intake.yml'));
 brk(C(1), '節の名を一字変える', subF('pages/requests.md', '[免責事項](https://github.com/cpsbvbng26-dotcom/cpsbvbng26-dotcom/blob/main/DISCLAIMER.md)の「突き合わせの受付」', '[免責事項](https://github.com/cpsbvbng26-dotcom/cpsbvbng26-dotcom/blob/main/DISCLAIMER.md)の「突合せの受付」'));
 brk(C(1), 'main で見出しの名が変わる', subX('cpsbvbng26-dotcom', 'DISCLAIMER.en.md', '## Statements about people', '## About people'));
 brk(C(2), '引いた句を一字変える', subF('pages/requests.md', '「手数料は取りません。」', '「手数料は取りません。費用もかかりません。」'));
@@ -205,8 +214,11 @@ brk(C(4), '加われる人の一行を変える', subF('pages/advisory.md', '- �
 brk(C(4), 'Sophaxis の募集の利益相反が変わる', subX('sophaxis', 'advisory.md', '- Any payment received in the last three years from one of them.', '- Any payment received in the last five years from one of them.'));
 brk(C(4), 'Sophaxis の募集の場所の決まりのリンク先が変わる', subX('sophaxis', 'advisory.ja.md', '[投稿の規程](./policies/submission.ja.md)の表にある', '[投稿の規程](./policies/terms.ja.md)の表にある'));
 brk(C(5), 'main の免責事項の範囲に golden-window-resolution が入る', subX('cpsbvbng26-dotcom', 'DISCLAIMER.md', '、solitary-school です。', '、solitary-school、golden-window-resolution です。'));
+brk(C(5), 'main の免責事項の次の行から legal-and-governance が外れる', subX('cpsbvbng26-dotcom', 'DISCLAIMER.md', 'research-collaboration、legal-and-governance、verification-hub', 'research-collaboration、verification-hub'));
+brk(C(5), 'main の英語の免責事項の次の行に人についての記載の節が入る', subX('cpsbvbng26-dotcom', 'DISCLAIMER.en.md', '"Information", "Issues and the language model"', '"Statements about people", "Information", "Issues and the language model"'));
+brk(C(5), 'main の免責事項の次の行から突き合わせの受付の節が外れる', subX('cpsbvbng26-dotcom', 'DISCLAIMER.md', '「issue の中身と言語モデル」「突き合わせの受付」', '「issue の中身と言語モデル」'));
 brk(C(5), 'scope.json の 十 から一つ外す', (F) => { const j = JSON.parse(F.get('verification/scope.json')); j['十'].pop(); F.set('verification/scope.json', JSON.stringify(j)); });
-brk(C(6), 'golden-window-resolution に突き合わせの受付が置かれる', addX('golden-window-resolution', '.github/workflows/checked-intake.yml'));
+brk(C(6), 'golden-window-resolution に免責事項の頁が置かれる', addX('golden-window-resolution', 'DISCLAIMER.md'));
 brk(C(6), 'golden-window-resolution に個人情報の頁が置かれる', addX('golden-window-resolution', 'docs/privacy.md'));
 brk(C(7), '正本の条文が一字変わる', subX('cpsbvbng26-dotcom', 'verification/statutes.json', '故意又は過失によって他人の権利', '故意又は重過失によって他人の権利'));
 brk(C(7), '写しから条を一つ外す', (F) => { const j = JSON.parse(F.get('verification/canonical-statutes.json')); delete j['条文']['刑法 第36条']; F.set('verification/canonical-statutes.json', JSON.stringify(j)); });
