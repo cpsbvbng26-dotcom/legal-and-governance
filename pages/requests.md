@@ -1,6 +1,6 @@
 # 修正と削除の求め
 
-最終更新：2026-11-19。
+最終更新：2026-11-25。
 
 この頁は、運営者のサイトとリポジトリについての求めを、どこへ出すかをまとめたものです。
 この頁は、新しい手続きを作りません。
@@ -15,7 +15,7 @@
 [免責事項](https://github.com/cpsbvbng26-dotcom/cpsbvbng26-dotcom/blob/main/DISCLAIMER.md)の「人についての記載」の節は、「個人の情報を含む求めは、公開の issue ではなくメールで受け付けます。」と書いています。
 [削除の規程](https://github.com/cpsbvbng26-dotcom/sophaxis/blob/main/policies/takedown.ja.md)は、「公開の場で行えない求めは、運営者の ORCID の記録にあるメールアドレスへメールで送ります。」と書いています。
 この入口は、新しい連絡先を作りません。
-research-collaboration の頁は、これと違う手順を書いています（下の「research-collaboration」）。
+research-collaboration の頁も、免責事項のメールの宛先で求めを受けると書いています（下の「research-collaboration」）。
 [免責事項](https://github.com/cpsbvbng26-dotcom/cpsbvbng26-dotcom/blob/main/DISCLAIMER.md)は、「運営者の住所は、届いた個人の情報の本人から求めがあれば、遅滞なく答えます。」と書いています。
 
 ## 10 のリポジトリと deposit-check
@@ -25,13 +25,16 @@ research-collaboration の頁は、これと違う手順を書いています（
 [免責事項](https://github.com/cpsbvbng26-dotcom/cpsbvbng26-dotcom/blob/main/DISCLAIMER.md)は、「運営者は、届いた求めを速やかに確かめ、必要なときは訂正または削除します。」と書いています。
 [免責事項](https://github.com/cpsbvbng26-dotcom/cpsbvbng26-dotcom/blob/main/DISCLAIMER.md)の「情報の扱い」の節が、届いた個人の情報の開示・訂正・利用の停止・消去の求めを受けます。
 [免責事項](https://github.com/cpsbvbng26-dotcom/cpsbvbng26-dotcom/blob/main/DISCLAIMER.md)は、その求めについて「手数料は取りません。」と書いています。
-人についての記載でない権利の侵害（著作権・商標など）の知らせの手順は、2026-11-19 の main の免責事項に書かれていません。
+人についての記載でない権利の侵害（著作権・商標など）の知らせの手順は、2026-11-25 の main の免責事項に書かれていません。
 
 ## golden-window-resolution と、この入口
 
 golden-window-resolution と、この入口のリポジトリ legal-and-governance は、免責事項の範囲の行に名がありません。
-golden-window-resolution についての求めの手順は、2026-11-19 の main のどの頁にも書かれていません。
-この入口のリポジトリについての求めは、この入口が自分で決めた手順によります。
+[免責事項](https://github.com/cpsbvbng26-dotcom/cpsbvbng26-dotcom/blob/main/DISCLAIMER.md)は、範囲の行の次の行でその両方を挙げ、「情報の扱い」「issue の中身と言語モデル」「突き合わせの受付」「本文の空の issue」の節が「それぞれの節に書いた範囲で掛かります。」と書いています。
+[golden-window-resolution の README](https://github.com/cpsbvbng26-dotcom/golden-window-resolution/blob/main/README.md) は、届いた個人の情報の扱いと、開示・訂正・利用の停止・消去の求め方が、免責事項の「情報の扱い」の節にあると書いています。
+[免責事項](https://github.com/cpsbvbng26-dotcom/cpsbvbng26-dotcom/blob/main/DISCLAIMER.md)の「人についての記載」の節は、範囲の行の次の行が挙げる節に入っていません。
+[免責事項](https://github.com/cpsbvbng26-dotcom/cpsbvbng26-dotcom/blob/main/DISCLAIMER.md)の「情報の扱い」の節は、「legal-and-governance では、誤りの知らせの様式（error-report.yml）で開かれた issue に、この節が掛かります。」と書いています。
+この入口のリポジトリについてのそのほかの求めは、この入口が自分で決めた手順によります。
 その手順は、[個人情報の取り扱い](./privacy.md)と、この頁の「この入口の様式で受ける求め」にあります。
 
 ## 公開物の誤り
@@ -40,7 +43,7 @@ golden-window-resolution についての求めの手順は、2026-11-19 の main
 様式の場所は、[法務の索引](./index.md)の表にあります。
 [免責事項](https://github.com/cpsbvbng26-dotcom/cpsbvbng26-dotcom/blob/main/DISCLAIMER.md)の「突き合わせの受付」の節は、「2026-12-01（日本時間）から、その日以後に開かれた誤りの知らせの issue に当てます。」と書いています。
 [免責事項](https://github.com/cpsbvbng26-dotcom/cpsbvbng26-dotcom/blob/main/DISCLAIMER.md)は、「誤りが見つかったものは、消さずに正誤表と訂正の記録に残しています。」と書いています。
-golden-window-resolution には、2026-11-19 の main で、突き合わせの受付の仕事が置かれていません。
+golden-window-resolution にも、突き合わせの受付の[仕事](https://github.com/cpsbvbng26-dotcom/golden-window-resolution/blob/main/.github/workflows/checked-intake.yml)と[台本](https://github.com/cpsbvbng26-dotcom/golden-window-resolution/blob/main/.github/checked-intake/verify.js)と[設定](https://github.com/cpsbvbng26-dotcom/golden-window-resolution/blob/main/.github/checked-intake/config.json)が置かれています。
 
 ## Sophaxis の記録
 
@@ -61,8 +64,9 @@ Sophaxis の記録についての求めは、Sophaxis の規程と様式で扱�
 ## research-collaboration
 
 research-collaboration についての求めは、その[削除・訂正・開示の求め](https://github.com/cpsbvbng26-dotcom/research-collaboration/blob/main/policies/requests.md)の頁の手順で扱います。
-[その頁](https://github.com/cpsbvbng26-dotcom/research-collaboration/blob/main/policies/requests.md)は、「運営者は、求めた人が自分の GitHub のプロフィールに連絡先を公開しているときに限り、その連絡先へ非公開で答えます。」と書いています。
-[その頁](https://github.com/cpsbvbng26-dotcom/research-collaboration/blob/main/policies/requests.md)は、「求めの窓口は、GitHub の様式だけです。」とも書いています。
+[その頁](https://github.com/cpsbvbng26-dotcom/research-collaboration/blob/main/policies/requests.md)は、「求めは、この様式のほか、運営者の免責事項にあるメールの宛先でも受けます。」と書いています。
+[その頁](https://github.com/cpsbvbng26-dotcom/research-collaboration/blob/main/policies/requests.md)は、公開の場で書けない求めについて、「運営者は、そのメールに非公開で答えます。」と書いています。
+[その頁](https://github.com/cpsbvbng26-dotcom/research-collaboration/blob/main/policies/requests.md)は、「求めた人が、自分の連絡先を公開する必要はありません。」とも書いています。
 
 ## この入口の様式で受ける求め
 

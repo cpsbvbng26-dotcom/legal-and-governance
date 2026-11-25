@@ -1,6 +1,6 @@
 # Requests
 
-Last updated: 2026-11-19.
+Last updated: 2026-11-25.
 
 This page says where a request about the operator's sites and repositories goes.
 This page creates no new procedure.
@@ -15,7 +15,7 @@ The address is the email address on the operator's [ORCID record](https://orcid.
 The [Disclaimer](https://github.com/cpsbvbng26-dotcom/cpsbvbng26-dotcom/blob/main/DISCLAIMER.en.md), section "Statements about people", says: "A request that contains personal information is received by email, not in a public issue."
 The [Takedown Policy](https://github.com/cpsbvbng26-dotcom/sophaxis/blob/main/policies/takedown.md) of Sophaxis says: "A request that cannot be made in public goes by email to the address on the operator's ORCID record."
 This entrance creates no new contact.
-The page of research-collaboration gives a different procedure (see "research-collaboration" below).
+The page of research-collaboration also receives requests at the email address of the Disclaimer (see "research-collaboration" below).
 The [Disclaimer](https://github.com/cpsbvbng26-dotcom/cpsbvbng26-dotcom/blob/main/DISCLAIMER.en.md) says: "The operator's address is given without delay to a person whose personal information the operator has received, on request."
 
 ## The 10 repositories and deposit-check
@@ -25,13 +25,17 @@ The [Disclaimer](https://github.com/cpsbvbng26-dotcom/cpsbvbng26-dotcom/blob/mai
 The [Disclaimer](https://github.com/cpsbvbng26-dotcom/cpsbvbng26-dotcom/blob/main/DISCLAIMER.en.md) says: "The operator checks each request promptly and corrects or removes the statement where needed."
 The [Disclaimer](https://github.com/cpsbvbng26-dotcom/cpsbvbng26-dotcom/blob/main/DISCLAIMER.en.md), section "Information", receives requests to disclose, correct, stop using or erase the personal information received.
 Of those requests, the [Disclaimer](https://github.com/cpsbvbng26-dotcom/cpsbvbng26-dotcom/blob/main/DISCLAIMER.en.md) says: "No fee is charged."
-On main as of 2026-11-19, the Disclaimer gives no procedure for a notice of an infringement that does not concern a statement about a person, such as copyright or a trademark.
+On main as of 2026-11-25, the Disclaimer gives no procedure for a notice of an infringement that does not concern a statement about a person, such as copyright or a trademark.
 
 ## golden-window-resolution and this entrance
 
 golden-window-resolution and this repository, legal-and-governance, are not named in the scope line of the Disclaimer.
-On main as of 2026-11-19, no page gives a procedure for requests about golden-window-resolution.
-Requests about this repository follow the procedure that this entrance set for itself.
+The [Disclaimer](https://github.com/cpsbvbng26-dotcom/cpsbvbng26-dotcom/blob/main/DISCLAIMER.en.md) names both in the line after the scope line, and says that the sections "Information", "Issues and the language model", "Checked intake" and "Issues with an empty body" apply to them, "each to the extent that it states."
+The [README of golden-window-resolution](https://github.com/cpsbvbng26-dotcom/golden-window-resolution/blob/main/README.en.md) points to the section "Information" of the Disclaimer for personal data received in an issue.
+The same README points to that section for how to ask for the disclosure, correction, stop of use or erasure of that data.
+The [Disclaimer](https://github.com/cpsbvbng26-dotcom/cpsbvbng26-dotcom/blob/main/DISCLAIMER.en.md), section "Statements about people", is not among the sections that the line after the scope line lists.
+The [Disclaimer](https://github.com/cpsbvbng26-dotcom/cpsbvbng26-dotcom/blob/main/DISCLAIMER.en.md), section "Information", says: "In legal-and-governance, this section applies to issues opened with the error report form (error-report.yml)."
+Other requests about this repository follow the procedure that this entrance set for itself.
 That procedure is in [Personal data](./privacy.en.md) and in the section "Requests received by the form of this entrance" of this page.
 
 ## Errors in published works
@@ -40,7 +44,7 @@ An error in a published work is received through the "Report an error" form of i
 The forms are listed in the tables of the [Legal index](./index.en.md).
 The [Disclaimer](https://github.com/cpsbvbng26-dotcom/cpsbvbng26-dotcom/blob/main/DISCLAIMER.en.md), section "Checked intake", says: "From 2026-12-01 (Japan time), it applies to error report issues opened on or after that day."
 The [Disclaimer](https://github.com/cpsbvbng26-dotcom/cpsbvbng26-dotcom/blob/main/DISCLAIMER.en.md) says: "Errors that were found are kept, not deleted, in the errata and the record of corrections."
-On main as of 2026-11-19, golden-window-resolution has no workflow for the checked intake.
+golden-window-resolution also has the checked intake: its [workflow](https://github.com/cpsbvbng26-dotcom/golden-window-resolution/blob/main/.github/workflows/checked-intake.yml), [script](https://github.com/cpsbvbng26-dotcom/golden-window-resolution/blob/main/.github/checked-intake/verify.js) and [settings](https://github.com/cpsbvbng26-dotcom/golden-window-resolution/blob/main/.github/checked-intake/config.json).
 
 ## Records on Sophaxis
 
@@ -61,8 +65,9 @@ That automatic step runs only on the removal form of Sophaxis.
 ## research-collaboration
 
 A request about research-collaboration is handled under the procedure of its [Requests](https://github.com/cpsbvbng26-dotcom/research-collaboration/blob/main/policies/requests.en.md) page.
-[That page](https://github.com/cpsbvbng26-dotcom/research-collaboration/blob/main/policies/requests.en.md) says: "The operator answers privately only when the requester has made a contact public on their own GitHub profile, and answers to that contact."
-[That page](https://github.com/cpsbvbng26-dotcom/research-collaboration/blob/main/policies/requests.en.md) also says: "The GitHub form is the only channel for requests."
+[That page](https://github.com/cpsbvbng26-dotcom/research-collaboration/blob/main/policies/requests.en.md) says: "Requests are also received, besides this form, at the email address in the operator's Disclaimer."
+Of a request that cannot be made in public, [that page](https://github.com/cpsbvbng26-dotcom/research-collaboration/blob/main/policies/requests.en.md) says: "The operator answers that email privately."
+[That page](https://github.com/cpsbvbng26-dotcom/research-collaboration/blob/main/policies/requests.en.md) also says: "The requester does not need to make any contact public."
 
 ## Requests received by the form of this entrance
 

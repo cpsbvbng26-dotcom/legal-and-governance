@@ -1,6 +1,6 @@
 # Legal index
 
-Last updated: 2026-11-19.
+Last updated: 2026-11-25.
 
 This page is an index from which the legal framework of the operator's sites and repositories can be followed.
 The index is a guide, not a policy.
@@ -103,10 +103,11 @@ The [README of research-collaboration](https://github.com/cpsbvbng26-dotcom/rese
 
 The [README of golden-window-resolution](https://github.com/cpsbvbng26-dotcom/golden-window-resolution/blob/main/README.en.md) describes it as the "Source, PDF and verification scripts of the paper".
 This repository has no disclaimer page and no page on personal data.
-The scope line of the [Disclaimer](https://github.com/cpsbvbng26-dotcom/cpsbvbng26-dotcom/blob/main/DISCLAIMER.en.md) does not name this repository on main as of 2026-11-19.
-That no page gives a procedure for requests about this repository is stated in [Requests](./requests.en.md).
+The scope line of the [Disclaimer](https://github.com/cpsbvbng26-dotcom/cpsbvbng26-dotcom/blob/main/DISCLAIMER.en.md) does not name this repository.
+The [Disclaimer](https://github.com/cpsbvbng26-dotcom/cpsbvbng26-dotcom/blob/main/DISCLAIMER.en.md) names it in the line after the scope line, and says that the sections "Information", "Issues and the language model", "Checked intake" and "Issues with an empty body" apply to it, "each to the extent that it states."
+Where to send a request about this repository is stated in [Requests](./requests.en.md).
 The [error report form](https://github.com/cpsbvbng26-dotcom/golden-window-resolution/blob/main/.github/ISSUE_TEMPLATE/error-report.yml) of this repository says: "From 2026-12-01, this form is checked by the checked intake."
-On main as of 2026-11-19, the repository has no workflow for the checked intake.
+The repository has the checked intake: its [workflow](https://github.com/cpsbvbng26-dotcom/golden-window-resolution/blob/main/.github/workflows/checked-intake.yml), [script](https://github.com/cpsbvbng26-dotcom/golden-window-resolution/blob/main/.github/checked-intake/verify.js) and [settings](https://github.com/cpsbvbng26-dotcom/golden-window-resolution/blob/main/.github/checked-intake/config.json).
 
 | Page | Content |
 | --- | --- |
